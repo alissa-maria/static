@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+    <title>doing better | rain</title>
+    <link rel="canonical" href="https://rain.bearblog.dev/doing-better/">
+    <meta name="rain" content="look-for-the-bear-necessities">
+
+    <meta name="title" content="lorem ipsum">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="post ">
+    <header>
+        <a class="title" href="index.html">
+            <h1>
+                a light rain was falling
+            </h1>
+        </a>
+        <nav>
+            <p><a href="index.html">home</a> <a href="post.html">posts</a> <a href="about.html">me</a></p>
+        </nav>
+    </header>
+    <main>
+        <h1>
+            lorem ipsum
+        </h1>
+        <p>
+            <i>
+                <time datetime="2023-06-29">
+                    29 Jun, 2023
+                </time>
+            </i>
+        </p>
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum nec orci a dapibus. Duis vel lorem ultrices, tincidunt odio vel, suscipit neque. Nullam vulputate nunc at malesuada lacinia. Sed fringilla, odio ac tincidunt cursus, elit purus vulputate erat, placerat rhoncus eros odio in dui. Maecenas tristique eros ac arcu pulvinar auctor. Quisque sem dui, varius quis pulvinar vel, molestie eget elit. Duis auctor nisl ac arcu faucibus, cursus hendrerit felis tempor. Sed sed scelerisque neque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed pretium urna non molestie consectetur. Nulla facilisi. Donec ac dignissim lectus. In lacinia, orci hendrerit eleifend molestie, lectus velit finibus mauris, vel dignissim enim metus tristique ipsum. Cras laoreet consectetur nunc vel sollicitudin. Sed ut turpis nisl. Mauris nibh lorem, eleifend quis nisi eu, rutrum fringilla purus. </p>
+            <p>Sed viverra maximus mollis. Donec augue quam, ultrices sed commodo in, rutrum vitae mi. Nulla facilisi. Nunc rutrum condimentum faucibus. Cras semper interdum mi, quis facilisis sem tempor ut. Nam quis magna vitae elit semper consectetur. Praesent nulla odio, fermentum sit amet pellentesque scelerisque, pharetra eu nisl. Donec libero enim, efficitur vel luctus vel, viverra eu lacus. </p>
+            <hr>
+
+        </div>
+        <p class="tags">
+            <a href="/blog/?q=personal">#personal</a>
+        </p>
+        <form id="upvote-form" action="/upvote/eudujVDHTARARGaxFrDk/" method="post" style="display: inline">
+            <small>
+                <input hidden name="uid" value="eudujVDHTARARGaxFrDk" style="display:none">
+                <input hidden name="title" style="display:none">
+                <input type="hidden" name="csrfmiddlewaretoken"
+                    value="fv4bHG85rukUNQbARtBnzAvi5NAuHsXaL8xzhzJD1vZ8CSqRRIuO1sd2EH35lSfD">
+                <button class="upvote-button" title="Toast this post">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                        stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round" class="css-i6dzq1">
+                        <polyline points="17 11 12 6 7 11"></polyline>
+                        <polyline points="17 18 12 13 7 18"></polyline>
+                    </svg>
+                    <small class="upvote-count">28</small>
+                </button>
+            </small>
+        </form>
+        <script>
+            document.querySelector('#upvote-form').addEventListener('submit', (e) => {
+                e.preventDefault();
+                const form = e.target;
+                fetch(form.action, {
+                    method: form.method,
+                    body: new FormData(form),
+                });
+                const button = form.querySelector('button')
+                button.disabled = true
+                button.style.color = "salmon"
+                const upvoteCount = document.querySelector('.upvote-count')
+                upvoteCount.innerHTML = `${(parseInt(upvoteCount.innerHTML.split(" ")[0]) + 1)}`
+            });
+        </script>
+    </main>
+    <footer style="padding:25px 0;">
+        <span>
+            Made with <a href="https://bearblog.dev">Bear ʕ•ᴥ•ʔ</a>
+        </span>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inconsolata', MS Gothic, Arial;
+    color: rgb(69, 69, 69);
+
+    padding: 10px;
+    background: radial-gradient(circle, #faf2f9 0%, #f4f9fb 100%);
+
+    margin: auto;
+    max-width: 920px;
+}
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    font-size: 42px;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background: rgb(241, 241, 241);
+    margin-top: 20px;
+}
+
+p {
+    font-weight: 300;
+}
+
+a {
+    text-decoration-style: dotted;
+}
+
+a:hover {
+    color: #d97fa2;
+}
+
+ul {
+    list-style: none;
+}
+
+.leftcolumn {
+    float: left;
+    width: 70%;
+    padding-right: 10px;
+}
+
+.rightcolumn {
+    float: left;
+    width: 30%;
+    padding-left: 10px;
+}
+
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+.card {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    margin-top: 20px;
+    /* box-shadow: 4px 4px rgb(94, 89, 89); */
+    box-shadow: 0px 15px 15px -15px rgb(227, 226, 228), 0px 0 15px -3px rgb(227, 226, 228);
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 800px) {
+
+    .leftcolumn,
+    .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+}

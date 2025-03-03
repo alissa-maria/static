@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+    <title>me | rain</title>
+    <link rel="canonical" href="https://rain.bearblog.dev/me/">
+    <meta name="rain" content="look-for-the-bear-necessities">
+
+    <meta name="title" content="me">
+    <meta name="description"
+        content="hello!
+I&#x27;m Alissa, a blue going purple teamer in cyber security, in the beginning of her 20s. I&#x27;m a bit of an tech nerd, bit of a homebody. Next to programmi...">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="page ">
+    <header>
+        <a class="title" href="index.html">
+            <h1>
+                a light rain was falling
+            </h1>
+        </a>
+        <nav>
+            <p><a href="index.html">home</a> <a href="post.html">posts</a> <a href="about.html">me</a></p>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <h1 id="hello">hello!</h1>
+            <p>I'm Alissa, a blue going purple teamer in cyber security, in the beginning of her 20s. I'm a bit of an
+                tech nerd, bit of a homebody. Next to programming I like drawing, reading (novels and manga) and
+                (letter) writing, cooking and baking (for my friends), skincare, knitted sweaters, photography... and
+                right now I'm addicted to Animal Crossing. 🦋</p>
+            <hr>
+        </div>
+        <form id="upvote-form" action="/upvote/ikhSwgChMMbytAkTaStc/" method="post" style="display: inline">
+            <small>
+                <input hidden name="uid" value="ikhSwgChMMbytAkTaStc" style="display:none">
+                <input hidden name="title" style="display:none">
+                <input type="hidden" name="csrfmiddlewaretoken"
+                    value="uvi5QLb8FdmobSHT39ESZgYXKSGtBiEn08LtqEMGfe1C0UWa3oxjr8GHjM94fIWQ">
+                <button class="upvote-button" title="Toast this post">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                        stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round" class="css-i6dzq1">
+                        <polyline points="17 11 12 6 7 11"></polyline>
+                        <polyline points="17 18 12 13 7 18"></polyline>
+                    </svg>
+                    <small class="upvote-count">6</small>
+                </button>
+            </small>
+        </form>
+        <script>
+            document.querySelector('#upvote-form').addEventListener('submit', (e) => {
+                e.preventDefault();
+                const form = e.target;
+                fetch(form.action, {
+                    method: form.method,
+                    body: new FormData(form),
+                });
+                const button = form.querySelector('button')
+                button.disabled = true
+                button.style.color = "salmon"
+                const upvoteCount = document.querySelector('.upvote-count')
+                upvoteCount.innerHTML = `${(parseInt(upvoteCount.innerHTML.split(" ")[0]) + 1)}`
+            });
+        </script>
+    </main>
+    <footer style="padding:25px 0;">
+        <span>
+            Made with <a href="https://bearblog.dev">Bear ʕ•ᴥ•ʔ</a>
+        </span>
+    </footer>
+</body>
+
+</html>

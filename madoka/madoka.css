@@ -1,0 +1,111 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Elsie:wght@400;900&family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yeseva+One&display=swap');
+
+/* Define Soft, Muted, Cute Color Palette */
+:root {
+    --soft-pink: #ffb6c1;
+    --soft-lavender: #e6e6fa;
+    --soft-mint: #98fb98;
+    --soft-peach: #ffdab9;
+    --soft-gray: #d3d3d3;
+    --soft-white: #fff8f8;
+}
+
+/* Body Styles */
+body {
+    /* font-family: 'Karla', sans-serif; */
+    font-family: 'Source Sans 3', sans-serif;
+    background-color: var(--soft-white);
+    color: #333; /* Dark text for better readability on light background */
+}
+
+/* Container Styles with Stylish Box Shadow */
+.container {
+    max-width: 720px;
+    margin: 0 auto;
+    background-color: var(--soft-white);
+    padding: 32px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+
+/* Add hover effect for a subtle lift */
+.container:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15), 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Header Styles */
+header h1 {
+    /* font-family: 'Elsie', serif; */
+    font-family: 'Yeseva One', serif;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    color: var(--soft-pink);
+}
+
+h2 {
+    font-family: 'Yeseva One', serif;
+}
+
+/* Navigation Styles with Icons and Improved Visibility */
+nav {
+    padding: 4px;
+    text-align: center; /* Center-align the content */
+}
+
+nav ul {
+    list-style-type: none; /* Remove default list styles */
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center the items horizontally */
+}
+
+nav li {
+    margin-right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--soft-pink);
+    padding: 10px;
+    border: 1px solid var(--soft-pink);
+    border-radius: 5px;
+    position: relative;
+    background-color: var(--soft-white);
+}
+
+/* Improved Visibility: Add a semi-transparent background overlay */
+nav a:hover {
+    background-color: var(--soft-lavender);
+}
+
+/* Main Section Styles */
+main h2 {
+    border-bottom: 2px solid var(--soft-pink);
+    padding-bottom: 5px;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    font-size: 0.8em;
+    color: #333; /* Dark text for better readability on light background */
+}
+
+/* Custom Scrollbar Styles */
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: var(--soft-gray);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--soft-pink);
+    border: 2px solid var(--soft-white);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: var(--soft-lavender);
+}
